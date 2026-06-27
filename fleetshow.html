@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet & Tech | SkyLens</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Explore our advanced drone fleet equipped with the latest sensors and cinema-grade cameras. State-of-the-art UAVs for real estate, events, and tourism.">
+    <meta name="keywords" content="drone fleet, cinematic drones, aerial cameras, drone equipment">
+
+    <!--Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aerialdronestudio.com/technology.html">
+    <meta property="og:title" content="Fleet & Technology | SkyLens">
+    <meta property="og:description" content="Advanced drone fleet with latest sensors and cinematic cameras.">
+    <meta property="og:image" content="https://aerialdronestudio.com/favicon.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fleet & Technology | SkyLens">
+    <meta name="twitter:description" content="State-of-the-art drones equipped with advanced cinematic cameras.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link id="bootstrap-css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-custom fixed-top" id="mainNavbar" role="navigation" aria-label="Main navigation">
+        <div class="container-xl">
+            <a class="navbar-brand brand-logo-dark" href="index.html" aria-label="SkyLens home">
+                <img src="favicon.png" alt="SkyLens Logo" width="36" height="36" class="me-1">
+                <span class="h5 fw-bold text-main m-0 tracking-tight">SKYLENS</span>
+            </a>
+
+            <div class="d-flex align-items-center gap-2">
+                <!-- Theme Toggle - Always visible beside nav toggle -->
+                <!-- Theme Toggle - Always visible beside nav toggle -->
+                <button class="theme-toggle btn btn-sm btn-outline-custom border-0 p-2 d-custom-none"
+                    style="white-space: nowrap;">
+                    <i class="bi bi-sun-fill"></i>
+                </button>
+                <button class="rtl-toggle btn btn-sm btn-outline-custom border-0 p-2 d-custom-none"
+                    style="white-space: nowrap;" title="Toggle RTL">
+                    <span class="rtl-text fw-bold">RTL</span>
+                </button>
+
+                <!-- Nav Toggle Button -->
+                <button class="navbar-toggler border-0 shadow-none text-main" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                    aria-label="Toggle navigation menu" style="white-space: nowrap;">
+                    <i class="bi bi-list fs-2"></i>
+                </button>
+            </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel" style="background-color: var(--autonix-bg);">
+                <div class="offcanvas-header border-bottom border-secondary">
+                    <h5 class="offcanvas-title text-main fw-bold" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column">
+
+
+                    <ul class="navbar-nav ms-auto align-items-center gap-lg-4">
+                        <!-- Home Dropdown -->
+                        <!-- Home Links -->
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="fleetshow.html">FleetShow</a></li>
+                        <li class="nav-item"><a class="nav-link" href="technology.html">Tech</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                        <!-- Auth Buttons -->
+                        <li class="nav-item" id="authButtons">
+                            <div class="d-flex gap-2 align-items-center mt-3 mt-lg-0">
+                                <a href="login.html" class="btn btn-sm btn-outline-custom">Login</a>
+                                <button
+                                    class="theme-toggle btn btn-sm btn-outline-custom border-0 p-2 d-none d-custom-block ms-2"
+                                    style="white-space: nowrap;">
+                                    <i class="bi bi-sun-fill"></i>
+                                </button>
+                                <button
+                                    class="rtl-toggle btn btn-sm btn-outline-custom border-0 p-2 d-none d-custom-block ms-2"
+                                    style="white-space: nowrap;" title="Toggle RTL">
+                                    <span class="rtl-text fw-bold">RTL</span>
+                                </button>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        .gallery-item {
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item .gallery-overlay {
+            transition: opacity 0.3s ease;
+            opacity: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .transition-hover:hover img {
+            transform: scale(1.05) !important;
+        }
+    </style>
+
+    <div class="page-header"
+        style="background: linear-gradient(rgba(11, 15, 20, 0.85), rgba(11, 15, 20, 0.85)), url('assets/img/header_fleet_1782537181482.png') no-repeat center center/cover;">
+        <div class="container">
+            <h1 class="display-4 fw-bold text-white mb-3">Our Fleet Gallery</h1>
+            <p class="text-gray mx-auto lead" style="max-width: 600px;">Explore the visual perks of our advanced drone
+                technology and cinematic capabilities through our curated gallery.</p>
+        </div>
+    </div>
+
+
+    <!-- Drone Models Section -->
+    <section class="py-5 border-bottom border-secondary">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-white mb-3">Meet The Fleet</h2>
+                <p class="text-gray lead mx-auto" style="max-width: 600px;">
+                    Our 4 signature drone platforms built for cinematic excellence and industrial precision.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-sm-6 col-lg-3">
+                    <div
+                        class="card bg-transparent border border-secondary rounded-4 h-100 overflow-hidden shadow-lg transition-hover">
+                        <img src="assets/img/gallery/drone_model_1.jpg" class="card-img-top" alt="DJI Inspire 3"
+                            style="height: 200px; object-fit: cover;">
+                        <div class="card-body text-center p-4">
+                            <h5 class="text-white fw-bold mb-2">Inspire 3</h5>
+                            <span class="badge bg-cyan text-white mb-3">Cinematic 8K</span>
+                            <p class="text-white opacity-75 small mb-0">The ultimate full-frame cinematic drone for
+                                Hollywood-level filmmaking.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div
+                        class="card bg-transparent border border-secondary rounded-4 h-100 overflow-hidden shadow-lg transition-hover">
+                        <img src="assets/img/gallery/drone_model_2.jpg" class="card-img-top" alt="Mavic 3 Pro Cine"
+                            style="height: 200px; object-fit: cover;">
+                        <div class="card-body text-center p-4">
+                            <h5 class="text-white fw-bold mb-2">Mavic 3 Pro Cine</h5>
+                            <span class="badge bg-cyan text-white mb-3">Versatile Tri-Camera</span>
+                            <p class="text-white opacity-75 small mb-0">Compact, powerful, and perfect for real
+                                estate and swift deployments.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div
+                        class="card bg-transparent border border-secondary rounded-4 h-100 overflow-hidden shadow-lg transition-hover">
+                        <img src="assets/img/gallery/drone_model_3.jpg" class="card-img-top" alt="Custom FPV Cinelifter"
+                            style="height: 200px; object-fit: cover;">
+                        <div class="card-body text-center p-4">
+                            <h5 class="text-white fw-bold mb-2">FPV Cinelifter</h5>
+                            <span class="badge bg-cyan text-white mb-3">High-Speed Action</span>
+                            <p class="text-white opacity-75 small mb-0">Custom-built for chasing cars, sports,
+                                and diving through tight spaces.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div
+                        class="card bg-transparent border border-secondary rounded-4 h-100 overflow-hidden shadow-lg transition-hover">
+                        <img src="assets/img/gallery/drone_model_4.jpg" class="card-img-top" alt="Freefly Astro"
+                            style="height: 200px; object-fit: cover;">
+                        <div class="card-body text-center p-4">
+                            <h5 class="text-white fw-bold mb-2">Freefly Astro</h5>
+                            <span class="badge bg-cyan text-white mb-3">Industrial Precision</span>
+                            <p class="text-white opacity-75 small mb-0">Heavy payload capacity combined with
+                                centimeter-level RTK GPS accuracy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-5">
+        <div class="container py-4">
+            <div class="row g-4">
+                <!-- Image 1 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div
+                        class="gallery-item overflow-hidden rounded-4 position-relative border border-secondary shadow">
+                        <img src="assets/img/gallery/gallery_unique_1.jpg" class="img-fluid w-100" alt="Urban Aerials"
+                            style="height: 250px; object-fit: cover;">
+                        <div
+                            class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                            <h5 class="text-always-white fw-bold mb-1">Urban Aerials</h5>
+                            <p class="text-always-white opacity-75 small mb-0">High-altitude cityscapes</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image 2 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div
+                        class="gallery-item overflow-hidden rounded-4 position-relative border border-secondary shadow">
+                        <img src="assets/img/gallery/gallery_unique_2.jpg" class="img-fluid w-100"
+                            alt="Precision Control" style="height: 250px; object-fit: cover;">
+                        <div
+                            class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                            <h5 class="text-always-white fw-bold mb-1">Precision Control</h5>
+                            <p class="text-always-white opacity-75 small mb-0">Expert piloting</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image 3 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div
+                        class="gallery-item overflow-hidden rounded-4 position-relative border border-secondary shadow">
+                        <img src="assets/img/gallery/gallery_unique_3.jpg" class="img-fluid w-100" alt="Forest Tracking"
+                            style="height: 250px; object-fit: cover;">
+                        <div
+                            class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                            <h5 class="text-always-white fw-bold mb-1">Forest Tracking</h5>
+                            <p class="text-always-white opacity-75 small mb-0">Smooth cinematic tracking</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image 4 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div
+                        class="gallery-item overflow-hidden rounded-4 position-relative border border-secondary shadow">
+                        <img src="assets/img/gallery/gallery_unique_4.jpg" class="img-fluid w-100"
+                            alt="Nature Landscapes" style="height: 250px; object-fit: cover;">
+                        <div
+                            class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                            <h5 class="text-always-white fw-bold mb-1">Nature Landscapes</h5>
+                            <p class="text-always-white opacity-75 small mb-0">Breathtaking wide angles</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image 5 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div
+                        class="gallery-item overflow-hidden rounded-4 position-relative border border-secondary shadow">
+                        <img src="assets/img/gallery/gallery_unique_5.jpg" class="img-fluid w-100"
+                            alt="Cinematic Drones" style="height: 250px; object-fit: cover;">
+                        <div
+                            class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                            <h5 class="text-always-white fw-bold mb-1">Cinematic Drones</h5>
+                            <p class="text-always-white opacity-75 small mb-0">Professional grade gear</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image 6 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div
+                        class="gallery-item overflow-hidden rounded-4 position-relative border border-secondary shadow">
+                        <img src="assets/img/gallery/gallery_unique_6.jpg" class="img-fluid w-100" alt="Real Estate"
+                            style="height: 250px; object-fit: cover;">
+                        <div
+                            class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                            <h5 class="text-always-white fw-bold mb-1">Real Estate</h5>
+                            <p class="text-always-white opacity-75 small mb-0">Property showcases</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image 7 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div
+                        class="gallery-item overflow-hidden rounded-4 position-relative border border-secondary shadow">
+                        <img src="assets/img/gallery/gallery_unique_7.jpg" class="img-fluid w-100" alt="Golden Hour"
+                            style="height: 250px; object-fit: cover;">
+                        <div
+                            class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                            <h5 class="text-always-white fw-bold mb-1">Golden Hour</h5>
+                            <p class="text-always-white opacity-75 small mb-0">Stunning sunset captures</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image 8 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div
+                        class="gallery-item overflow-hidden rounded-4 position-relative border border-secondary shadow">
+                        <img src="assets/img/gallery/gallery_unique_8.jpg" class="img-fluid w-100" alt="Event Coverage"
+                            style="height: 250px; object-fit: cover;">
+                        <div
+                            class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                            <h5 class="text-always-white fw-bold mb-1">Event Coverage</h5>
+                            <p class="text-always-white opacity-75 small mb-0">Live event tracking</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image 9 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div
+                        class="gallery-item overflow-hidden rounded-4 position-relative border border-secondary shadow">
+                        <img src="assets/img/gallery/gallery_unique_9.jpg" class="img-fluid w-100" alt="Filmmaking"
+                            style="height: 250px; object-fit: cover;">
+                        <div
+                            class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                            <h5 class="text-always-white fw-bold mb-1">Filmmaking</h5>
+                            <p class="text-always-white opacity-75 small mb-0">Hollywood style shots</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image 10 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div
+                        class="gallery-item overflow-hidden rounded-4 position-relative border border-secondary shadow">
+                        <img src="assets/img/gallery/gallery_unique_10.jpg" class="img-fluid w-100" alt="City Nights"
+                            style="height: 250px; object-fit: cover;">
+                        <div
+                            class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                            <h5 class="text-always-white fw-bold mb-1">City Nights</h5>
+                            <p class="text-always-white opacity-75 small mb-0">Low light brilliance</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image 11 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div
+                        class="gallery-item overflow-hidden rounded-4 position-relative border border-secondary shadow">
+                        <img src="assets/img/gallery/gallery_unique_11.jpg" class="img-fluid w-100"
+                            alt="Travel & Tourism" style="height: 250px; object-fit: cover;">
+                        <div
+                            class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                            <h5 class="text-always-white fw-bold mb-1">Travel & Tourism</h5>
+                            <p class="text-always-white opacity-75 small mb-0">Inspiring destinations</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image 12 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div
+                        class="gallery-item overflow-hidden rounded-4 position-relative border border-secondary shadow">
+                        <img src="assets/img/gallery/gallery_unique_12.jpg" class="img-fluid w-100" alt="Dynamic Sports"
+                            style="height: 250px; object-fit: cover;">
+                        <div
+                            class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                            <h5 class="text-always-white fw-bold mb-1">Dynamic Sports</h5>
+                            <p class="text-always-white opacity-75 small mb-0">High-speed tracking</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Top Rated Section -->
+    <section class="py-5 border-top border-secondary">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-white mb-3">Top Rated Captures</h2>
+                <p class="text-gray lead mx-auto" style="max-width: 600px;">
+                    Our most requested and highest-rated drone services by our clients.
+                </p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Top 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div
+                        class="card bg-transparent border border-secondary rounded-4 h-100 overflow-hidden shadow-lg position-relative transition-hover">
+                        <div class="position-absolute top-0 end-0 m-3 z-3">
+                            <span class="badge bg-warning text-dark px-3 py-2 fs-6 rounded-pill fw-bold"><i
+                                    class="bi bi-star-fill me-1"></i> 5.0</span>
+                        </div>
+                        <div class="overflow-hidden">
+                            <img src="assets/img/gallery/gallery_unique_13.jpg" class="card-img-top"
+                                alt="Cinematic Real Estate"
+                                style="height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <h4 class="text-white fw-bold mb-3">Cinematic Real Estate</h4>
+                            <p class="text-gray mb-4">Stunning 4K aerial tours for high-end properties, ensuring maximum
+                                buyer engagement.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Top 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div
+                        class="card bg-transparent border border-secondary rounded-4 h-100 overflow-hidden shadow-lg position-relative transition-hover">
+                        <div class="position-absolute top-0 end-0 m-3 z-3">
+                            <span class="badge bg-warning text-dark px-3 py-2 fs-6 rounded-pill fw-bold"><i
+                                    class="bi bi-star-fill me-1"></i> 4.9</span>
+                        </div>
+                        <div class="overflow-hidden">
+                            <img src="assets/img/gallery/gallery_unique_14.jpg" class="card-img-top"
+                                alt="Event Coverage"
+                                style="height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <h4 class="text-white fw-bold mb-3">Live Event Coverage</h4>
+                            <p class="text-gray mb-4">Dynamic aerial angles for concerts, sports, and festivals with
+                                live broadcasting capabilities.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Top 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div
+                        class="card bg-transparent border border-secondary rounded-4 h-100 overflow-hidden shadow-lg position-relative transition-hover">
+                        <div class="position-absolute top-0 end-0 m-3 z-3">
+                            <span class="badge bg-warning text-dark px-3 py-2 fs-6 rounded-pill fw-bold"><i
+                                    class="bi bi-star-fill me-1"></i> 4.9</span>
+                        </div>
+                        <div class="overflow-hidden">
+                            <img src="assets/img/gallery/gallery_unique_15.jpg" class="card-img-top"
+                                alt="Film & TV Production"
+                                style="height: 250px; object-fit: cover; transition: transform 0.3s ease;">
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <h4 class="text-white fw-bold mb-3">Film & TV Production</h4>
+                            <p class="text-gray mb-4">Hollywood-grade heavy-lift drones carrying RED and ARRI cameras
+                                for breathtaking shots.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Best View Section -->
+    <section class="py-5 border-top border-secondary position-relative">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-white mb-3">Best Views From Above</h2>
+                <p class="text-gray lead mx-auto" style="max-width: 600px;">
+                    Experience the world from a completely new perspective.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-12 col-lg-8">
+                    <div
+                        class="card bg-transparent border-0 rounded-4 h-100 overflow-hidden shadow-lg transition-hover">
+                        <img src="assets/img/gallery/gallery_unique_16.jpg" class="img-fluid w-100 h-100"
+                            alt="Best View Main"
+                            style="object-fit: cover; min-height: 400px; transition: transform 0.5s ease;">
+                        <div class="position-absolute bottom-0 start-0 w-100 p-4"
+                            style="background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
+                            <h3 class="text-always-white fw-bold">Panoramic Horizons</h3>
+                            <p class="text-always-white opacity-75 mb-0">Capturing the sheer scale of the landscape.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4 d-flex flex-column gap-4">
+                    <div
+                        class="card bg-transparent border-0 rounded-4 overflow-hidden shadow-lg transition-hover flex-grow-1">
+                        <img src="assets/img/gallery/gallery_unique_17.jpg" class="img-fluid w-100 h-100"
+                            alt="Best View Secondary" style="object-fit: cover; transition: transform 0.5s ease;">
+                        <div class="position-absolute bottom-0 start-0 w-100 p-3"
+                            style="background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
+                            <h5 class="text-always-white fw-bold mb-0">Urban Heights</h5>
+                        </div>
+                    </div>
+                    <div
+                        class="card bg-transparent border-0 rounded-4 overflow-hidden shadow-lg transition-hover flex-grow-1">
+                        <img src="assets/img/gallery/gallery_unique_18.jpg" class="img-fluid w-100 h-100"
+                            alt="Best View Tertiary" style="object-fit: cover; transition: transform 0.5s ease;">
+                        <div class="position-absolute bottom-0 start-0 w-100 p-3"
+                            style="background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
+                            <h5 class="text-always-white fw-bold mb-0">Nature's Tapestry</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-4" role="contentinfo" aria-label="Site footer">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a class="navbar-brand brand-logo-dark" href="index.html" aria-label="SkyLens home">
+                        <img src="favicon.png" alt="SkyLens Logo" width="36" height="36" class="me-1">
+                        <span class="h5 fw-bold text-main m-0 tracking-tight">SKYLENS</span>
+                    </a>
+                    <p class="text-gray small mb-3">Premier cinematic drone videography studio for real estate, events,
+                        and tourism.</p>
+                    <div class="d-flex gap-3">
+                        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"
+                            class="text-gray fs-5 social-icon social-instagram" aria-label="Follow us on 
+Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer"
+                            class="text-gray fs-5 social-icon social-youtube" aria-label="Subscribe on YouTube"><i
+                                class="bi bi-youtube"></i></a>
+                        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer"
+                            class="text-gray fs-5 social-icon social-linkedin" aria-label="Connect on LinkedIn"><i
+                                class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-2">
+                    <h6 class="text-main fw-bold mb-3">Services</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="services.html#real-estate" class="footer-link">Real Estate</a></li>
+                        <li><a href="services.html#events" class="footer-link">Events</a></li>
+                        <li><a href="services.html#tourism" class="footer-link">Tourism Promo</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-6 col-lg-2">
+                    <h6 class="text-main fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="careers.html" class="footer-link">Careers</a></li>
+                        <li><a href="blog.html" class="footer-link">Studio Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <h6 class="text-main fw-bold mb-3">Newsletter</h6>
+                    <p class="text-gray small mb-3">Subscribe to get the latest updates and exclusive offers.</p>
+                    <form class="d-flex gap-2" onsubmit="event.preventDefault();">
+                        <input type="email" class="form-control form-control-sm bg-transparent text-main"
+                            placeholder="Email address" required style="border-color: rgba(128,128,128,0.3);">
+                        <button class="btn btn-sm btn-outline-custom" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div
+                class="border-top border-secondary pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 text-muted small">
+                <div>&copy; 2025 SkyLens. All rights reserved.</div>
+                <div class="d-flex gap-4">
+                    <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                    <a href="privacy.html" class="footer-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/theme.js"></script>
+</body>
+
+</html>

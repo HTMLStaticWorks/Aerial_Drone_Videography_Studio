@@ -1,1 +1,458 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyLens</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Cinematic drone reels for real estate, events, and tourism clients. Fully FAA Part 107 certified with strict regulatory compliance credentials.">
+    <meta name="keywords"
+        content="drone videography, aerial studio, real estate drone, event videography, tourism drone reels, FAA certified drone">
+    <meta name="author" content="SkyLens">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aerialdronestudio.com/">
+    <meta property="og:title" content="SkyLens">
+    <meta property="og:description" content="Cinematic drone reels for real estate, events, and tourism clients.">
+    <meta property="og:image" content="https://aerialdronestudio.com/favicon.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://aerialdronestudio.com/">
+    <meta name="twitter:title" content="SkyLens">
+    <meta name="twitter:description" content="Cinematic drone reels for real estate, events, and tourism clients.">
+    <meta name="twitter:image" content="https://aerialdronestudio.com/favicon.png">
+
+    <!-- Performance Optimization: Resource Hints -->
+    <!-- DNS Prefetch for faster domain resolution -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+    <!-- Preconnect for critical third-party origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link id="bootstrap-css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-custom fixed-top" id="mainNavbar" role="navigation" aria-label="Main navigation">
+        <div class="container-xl">
+            <a class="navbar-brand brand-logo-dark" href="index.html" aria-label="SkyLens home">
+                <img src="favicon.png" alt="SkyLens Logo" width="36" height="36" class="me-1">
+                <span class="h5 fw-bold text-main m-0 tracking-tight">SKYLENS</span>
+            </a>
+
+            <div class="d-flex align-items-center gap-2">
+                <!-- Theme Toggle - Always visible beside nav toggle -->
+                <!-- Theme Toggle - Always visible beside nav toggle -->
+                <button class="theme-toggle btn btn-sm btn-outline-custom border-0 p-2 d-custom-none"
+                    style="white-space: nowrap;">
+                    <i class="bi bi-sun-fill"></i>
+                </button>
+                <button class="rtl-toggle btn btn-sm btn-outline-custom border-0 p-2 d-custom-none"
+                    style="white-space: nowrap;" title="Toggle RTL">
+                    <span class="rtl-text fw-bold">RTL</span>
+                </button>
+
+                <!-- Nav Toggle Button -->
+                <button class="navbar-toggler border-0 shadow-none text-main" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                    aria-label="Toggle navigation menu" style="white-space: nowrap;">
+                    <i class="bi bi-list fs-2"></i>
+                </button>
+            </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel" style="background-color: var(--autonix-bg);">
+                <div class="offcanvas-header border-bottom border-secondary">
+                    <h5 class="offcanvas-title text-main fw-bold" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column">
+
+
+                    <ul class="navbar-nav ms-auto align-items-center gap-lg-4">
+                        <!-- Home Dropdown -->
+                        <!-- Home Links -->
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="fleetshow.html">FleetShow</a></li>
+                        <li class="nav-item"><a class="nav-link" href="technology.html">Tech</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                        <!-- Auth Buttons -->
+                        <li class="nav-item" id="authButtons">
+                            <div class="d-flex gap-2 align-items-center mt-3 mt-lg-0">
+                                <a href="login.html" class="btn btn-sm btn-outline-custom">Login</a>
+                                <button
+                                    class="theme-toggle btn btn-sm btn-outline-custom border-0 p-2 d-none d-custom-block ms-2"
+                                    style="white-space: nowrap;">
+                                    <i class="bi bi-sun-fill"></i>
+                                </button>
+                                <button
+                                    class="rtl-toggle btn btn-sm btn-outline-custom border-0 p-2 d-none d-custom-block ms-2"
+                                    style="white-space: nowrap;" title="Toggle RTL">
+                                    <span class="rtl-text fw-bold">RTL</span>
+                                </button>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main id="main-content">
+        <section class="hero-section" id="hero" aria-label="Welcome to SkyLens" style="background: linear-gradient(rgba(11, 15, 20, 0.85), rgba(11, 15, 20, 0.85)), url('assets/img/hero_index_1782537120292.png') no-repeat center center/cover;">
+            <div class="hero-shape shape-1"></div>
+            <div class="hero-shape shape-2"></div>
+            <div class="hero-shape shape-3"></div>
+
+            <div class="container text-center position-relative z-2">
+                <div class="d-inline-flex align-items-center gap-2 badge-custom mb-4">
+                    <span class="bg-gold rounded-circle" style="width: 8px; height: 8px;"></span>
+                    <span class="text-gold text-uppercase fw-medium small tracking-wider">Cinematic Drone
+                        Videography</span>
+                </div>
+
+                <h1 class="display-3 fw-bolder text-white mb-4 lh-tight">
+                    Elevate Your Visuals, <br>
+                    <span class="text-gradient">Capture the Extraordinary</span>
+                </h1>
+
+                <p class="lead text-gray mb-5 mx-auto" style="max-width: 700px;">
+                    Providing high-end cinematic drone reels for real estate, events, and tourism clients.
+                    Fully FAA Part 107 certified for safe and stunning aerial capture.
+                </p>
+
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <a href="services.html"
+                        class="btn btn-gradient d-flex align-items-center justify-content-center gap-2 text-decoration-none">
+                        View Flight Services <i class="bi bi-airplane-engines"></i>
+                    </a>
+                    <a href="technology.html" class="btn btn-outline-custom text-decoration-none">
+                        Our Fleet
+                    </a>
+                </div>
+            </div>
+
+            <div class="position-absolute bottom-0 mb-5 animate-bounce-slow text-gray">
+                <i class="bi bi-chevron-down fs-3" aria-hidden="true"></i>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-5 section-bg-gradient">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-white mb-3">Why Choose SkyLens?</h2>
+                    <p class="text-gray lead mx-auto" style="max-width: 600px;">
+                        Industry-leading cinematic drone solutions backed by cutting-edge technology and certified
+                        expertise
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card text-center h-100">
+                            <div class="icon-box mx-auto">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                            <h5 class="text-white fw-bold mb-3 text-center">FAA Certified Pilots</h5>
+                            <p class="text-gray">All pilots hold FAA Part 107 certification with extensive flight
+                                experience and rigorous safety training protocols and liability insurance.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card text-center h-100">
+                            <div class="icon-box mx-auto">
+                                <i class="bi bi-camera-reels"></i>
+                            </div>
+                            <h5 class="text-white fw-bold mb-3 text-center">Cinematic 4K/8K Quality</h5>
+                            <p class="text-gray">We use industry-leading drone tech to deliver breathtaking
+                                ultra-high-definition video for any platform or screen.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4">
+                        <div class="service-card text-center h-100">
+                            <div class="icon-box mx-auto">
+                                <i class="bi bi-clock-history"></i>
+                            </div>
+                            <h5 class="text-white fw-bold mb-3 text-center">Fast Turnaround</h5>
+                            <p class="text-gray">Our post-production team delivers your fully edited and color-graded
+                                reels exactly when you need them.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-5">
+            <div class="container py-4">
+                <div class="row g-4 text-center">
+                    <div class="col-6 col-lg-3">
+                        <h2 class="display-4 fw-bold text-cyan mb-2">2,500+</h2>
+                        <p class="text-gray mb-0">Flight Hours</p>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <h2 class="display-4 fw-bold text-cyan mb-2">850+</h2>
+                        <p class="text-gray mb-0">Projects Completed</p>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <h2 class="display-4 fw-bold text-cyan mb-2">98%</h2>
+                        <p class="text-gray mb-0">Client Satisfaction</p>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <h2 class="display-4 fw-bold text-cyan mb-2">15+</h2>
+                        <p class="text-gray mb-0">Industries Served</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Projects showcase -->
+        <section class="py-5 section-bg-gradient">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-white mb-3">Featured Reels</h2>
+                    <p class="text-gray lead mx-auto" style="max-width: 600px;">
+                        Explore our breathtaking cinematic shots across various industries
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="service-card h-100 d-flex flex-column text-center overflow-hidden p-0">
+                            <img src="assets/img/real_estate_drone.png" class="img-fluid w-100" alt="Real Estate" style="height: 200px; object-fit: cover;">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <div class="mb-3">
+                                    <span class="badge bg-gold text-dark px-3 py-2">Real Estate</span>
+                                </div>
+                                <h5 class="text-white fw-bold mb-3">Luxury Mansion Tour</h5>
+                                <p class="text-gray mb-3">Smooth cinematic fly-throughs and sweeping aerial views for a
+                                    premium property listing.</p>
+                                <div class="d-flex flex-column align-items-center gap-2 small text-gray mt-auto">
+                                    <span><i class="bi bi-geo-alt me-1"></i>Beverly Hills, CA</span>
+                                    <span><i class="bi bi-calendar3 me-1"></i>Dec 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card h-100 d-flex flex-column text-center overflow-hidden p-0">
+                            <img src="assets/img/event_drone.png" class="img-fluid w-100" alt="Events" style="height: 200px; object-fit: cover;">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <div class="mb-3">
+                                    <span class="badge bg-warning text-dark px-3 py-2">Events</span>
+                                </div>
+                                <h5 class="text-white fw-bold mb-3">Summer Music Festival</h5>
+                                <p class="text-gray mb-3">Dynamic aerial shots capturing the massive crowd energy and
+                                    spectacular stage lighting.</p>
+                                <div class="d-flex flex-column align-items-center gap-2 small text-gray mt-auto">
+                                    <span><i class="bi bi-geo-alt me-1"></i>Austin, TX</span>
+                                    <span><i class="bi bi-calendar3 me-1"></i>Nov 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card h-100 d-flex flex-column text-center overflow-hidden p-0">
+                            <img src="assets/img/tourism_drone.png" class="img-fluid w-100" alt="Tourism" style="height: 200px; object-fit: cover;">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <div class="mb-3">
+                                    <span class="badge bg-success px-3 py-2">Tourism</span>
+                                </div>
+                                <h5 class="text-white fw-bold mb-3">Coastal Paradise Promo</h5>
+                                <p class="text-gray mb-3">Breathtaking 8K drone footage of pristine beaches and luxury
+                                    resorts for a tourism board.</p>
+                                <div class="d-flex flex-column align-items-center gap-2 small text-gray mt-auto">
+                                    <span><i class="bi bi-geo-alt me-1"></i>Maui, HI</span>
+                                    <span><i class="bi bi-calendar3 me-1"></i>Oct 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="services.html" class="btn btn-gradient">
+                        View All Services <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Testimonials -->
+        <section class="py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-white mb-3">What Our Clients Say</h2>
+                    <p class="text-gray lead mx-auto" style="max-width: 600px;">
+                        Trusted by leading organizations worldwide
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="service-card h-100">
+                            <div class="mb-3 text-center">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="text-gray mb-4">"Aeronix's aerial mapping services transformed our construction
+                                workflow. The precision and speed of their deliverables have saved us countless hours
+                                and significantly improved our project planning."</p>
+                            <div class="d-flex align-items-center gap-3 justify-content-center">
+                                <div class="text-center">
+                                    <img src="assets/img/client_1.png" alt="Sarah Mitchell" class="rounded-circle mb-3 border border-2 border-secondary" style="width: 64px; height: 64px; object-fit: cover;">
+                                    <h6 class="text-white mb-0">Sarah Mitchell</h6>
+                                    <small class="text-gray">Project Manager, BuildTech Solutions</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="service-card h-100">
+                            <div class="mb-3 text-center">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="text-gray mb-4">"The thermal inspection service helped us identify equipment
+                                issues before they became costly failures. The ROI has been incredible, and the team is
+                                extremely professional."</p>
+                            <div class="d-flex align-items-center gap-3 justify-content-center">
+                                <div class="text-center">
+                                    <img src="assets/img/client_2.png" alt="Marcus Rodriguez" class="rounded-circle mb-3 border border-2 border-secondary" style="width: 64px; height: 64px; object-fit: cover;">
+                                    <h6 class="text-white mb-0">Marcus Rodriguez</h6>
+                                    <small class="text-gray">Operations Director, SolarWave Energy</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-5 section-bg-gradient">
+            <div class="container py-5">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8 text-center text-lg-start">
+                        <h2 class="display-5 fw-bold text-white mb-3">Ready to Take Flight?</h2>
+                        <p class="text-gray lead mb-0">
+                            Get a free consultation and discover how our drone services can elevate your next project.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end text-center">
+                        <a href="contact.html" class="btn btn-gradient btn-lg">
+                            Get Started Today <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-4" role="contentinfo" aria-label="Site footer">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a class="navbar-brand brand-logo-dark" href="index.html" aria-label="SkyLens home">
+                        <img src="favicon.png" alt="SkyLens Logo" width="36" height="36" class="me-1">
+                        <span class="h5 fw-bold text-main m-0 tracking-tight">SKYLENS</span>
+                    </a>
+                    <p class="text-gray small mb-3">Premier cinematic drone videography studio for real estate, events,
+                        and tourism.</p>
+                    <div class="d-flex gap-3">
+                        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"
+                            class="text-gray fs-5 social-icon social-instagram" aria-label="Follow us on 
+Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer"
+                            class="text-gray fs-5 social-icon social-youtube" aria-label="Subscribe on YouTube"><i
+                                class="bi bi-youtube"></i></a>
+                        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer"
+                            class="text-gray fs-5 social-icon social-linkedin" aria-label="Connect on LinkedIn"><i
+                                class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-2">
+                    <h6 class="text-main fw-bold mb-3">Services</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="services.html#real-estate" class="footer-link">Real Estate</a></li>
+                        <li><a href="services.html#events" class="footer-link">Events</a></li>
+                        <li><a href="services.html#tourism" class="footer-link">Tourism Promo</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-6 col-lg-2">
+                    <h6 class="text-main fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="careers.html" class="footer-link">Careers</a></li>
+                        <li><a href="blog.html" class="footer-link">Studio Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <h6 class="text-main fw-bold mb-3">Newsletter</h6>
+                    <p class="text-gray small mb-3">Subscribe to get the latest updates and exclusive offers.</p>
+                    <form class="d-flex gap-2" onsubmit="event.preventDefault();">
+                        <input type="email" class="form-control form-control-sm bg-transparent text-main"
+                            placeholder="Email address" required style="border-color: rgba(128,128,128,0.3);">
+                        <button class="btn btn-sm btn-outline-custom" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div
+                class="border-top border-secondary pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 text-muted small">
+                <div>&copy; 2025 SkyLens. All rights reserved.</div>
+                <div class="d-flex gap-4">
+                    <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                    <a href="privacy.html" class="footer-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/theme.js"></script>
+</body>
+
+</html>
