@@ -1,4 +1,3 @@
-import { saveContactForm } from './db.js';
 
 // Navbar Scroll Effect
 const navbar = document.getElementById('mainNavbar');
@@ -457,36 +456,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 console.log('🚁 Aeronix animations loaded! (Optimized)');
 
-// ============================================
-// BACK TO TOP BUTTON
-// ============================================
-(function initBackToTop() {
-    const backToTopBtn = document.createElement('button');
-    backToTopBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-</svg>`;
-    backToTopBtn.className = 'back-to-top';
-    backToTopBtn.setAttribute('aria-label', 'Back to top');
-    
-    // Ensure body exists before appending
-    if (document.body) {
-        document.body.appendChild(backToTopBtn);
-    } else {
-        document.addEventListener('DOMContentLoaded', () => document.body.appendChild(backToTopBtn));
-    }
 
-    window.addEventListener('scroll', () => {
+
+
+/*==================================
+      BACK TO TOP BUTTON
+===================================*/
+
+const initBackToTop = () => {
+    const backToTop = document.getElementById("backToTop");
+    if (!backToTop) return;
+    window.addEventListener("scroll", () => {
         if (window.scrollY > 300) {
-            backToTopBtn.classList.add('show');
+            backToTop.classList.add("show");
         } else {
-            backToTopBtn.classList.remove('show');
+            backToTop.classList.remove("show");
         }
     });
-
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
     });
-})();
+};
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initBackToTop);
+} else {
+    initBackToTop();
+}
