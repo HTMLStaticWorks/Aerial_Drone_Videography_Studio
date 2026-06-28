@@ -206,7 +206,7 @@ if (contactForm) {
     }
 }
 // Drone-Themed Animations Script (OPTIMIZED)
-// Author: Aeronix Development Team
+// Author: SkyLens Development Team
 
 // ============================================
 // SCROLL ANIMATIONS (FASTER)
@@ -454,7 +454,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // startFlyingSymbols();
 });
 
-console.log('🚁 Aeronix animations loaded! (Optimized)');
+console.log('🚁 SkyLens animations loaded! (Optimized)');
 
 
 
@@ -483,3 +483,36 @@ if (document.readyState === "loading") {
 } else {
     initBackToTop();
 }
+
+/*==================================
+      EQUALIZE CARD HEIGHTS
+===================================*/
+
+const equalizeCardHeights = () => {
+    const rows = document.querySelectorAll('.row');
+    rows.forEach(row => {
+        const cards = row.querySelectorAll('.service-card');
+        if (cards.length > 1) {
+            // Reset min-height first to get natural height
+            cards.forEach(card => card.style.minHeight = '0px');
+            
+            if (window.innerWidth >= 768) {
+                let maxHeight = 0;
+                cards.forEach(card => {
+                    const h = card.offsetHeight;
+                    if (h > maxHeight) maxHeight = h;
+                });
+                cards.forEach(card => card.style.minHeight = maxHeight + 'px');
+            } else {
+                cards.forEach(card => card.style.minHeight = 'auto');
+            }
+        }
+    });
+};
+
+if (document.readyState === "complete") {
+    equalizeCardHeights();
+} else {
+    window.addEventListener('load', equalizeCardHeights);
+}
+window.addEventListener('resize', equalizeCardHeights);

@@ -2,7 +2,7 @@
 const themeToggle = {
     init() {
         // Load saved theme or default to light
-        const savedTheme = localStorage.getItem('aeronix-theme') || 'light';
+        const savedTheme = localStorage.getItem('skylens-theme') || 'light';
         this.setTheme(savedTheme, false);
 
         // Add event listener to all theme toggle buttons
@@ -16,7 +16,7 @@ const themeToggle = {
     setTheme(theme, save = true) {
         document.documentElement.setAttribute('data-theme', theme);
         if (save) {
-            localStorage.setItem('aeronix-theme', theme);
+            localStorage.setItem('skylens-theme', theme);
         }
         this.updateToggleIcon(theme);
     },

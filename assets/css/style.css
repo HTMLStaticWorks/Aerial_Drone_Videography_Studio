@@ -455,7 +455,7 @@ body {
 /* Gradient Buttons */
 .btn-gradient {
     background: linear-gradient(135deg, var(--autonix-blue), var(--autonix-blue-soft));
-    border: none;
+    border: 1px solid transparent;
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 6px;
@@ -928,6 +928,10 @@ footer .text-muted {
 
 .hover-text-white:hover {
     color: white !important;
+}
+
+[data-theme="light"] .hover-text-white:hover {
+    color: var(--text-main) !important;
 }
 
 /* Contact Form Container with Glassmorphism */
@@ -1799,12 +1803,17 @@ button,
 }
 
 .hero-section {
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
 }
 
 .page-header {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
 }
 
@@ -1977,6 +1986,11 @@ button,
     transform:scale(.95);
 }
 
+[dir="rtl"] .back-to-top {
+    right: auto;
+    left: 30px;
+}
+
 @media(max-width:768px){
 
     .back-to-top{
@@ -1987,6 +2001,11 @@ button,
         font-size:18px;
     }
 
+    [dir="rtl"] .back-to-top {
+        right: auto;
+        left: 20px;
+    }
+
 }
 /*==================================
     PLACEHOLDER TEXT VISIBILITY
@@ -1994,4 +2013,53 @@ button,
 ::placeholder {
     color: var(--text-muted) !important;
     opacity: 0.8 !important;
+}
+
+/*==================================
+    GLOBAL FOCUS RESET
+===================================*/
+*:focus,
+*:focus-visible,
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+.btn:focus,
+.nav-link:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/*==================================
+    MOBILE TAG SCALE
+===================================*/
+@media (max-width: 767px) {
+    .mobile-tag-scale {
+        padding: 0.5rem !important;
+        min-width: 100px !important;
+    }
+    .mobile-tag-scale .small {
+        font-size: 0.6rem !important;
+    }
+    .mobile-tag-scale .tag-value {
+        font-size: 1.1rem !important;
+    }
+    .mobile-tag-scale .flight-time-text {
+        font-size: 0.55rem !important;
+        letter-spacing: 0.5px !important;
+    }
+    .mobile-tag-scale .rounded-circle {
+        width: 6px !important;
+        height: 6px !important;
+    }
+}
+
+/*==================================
+    AUTH FORMS INPUT HEIGHT FIX
+===================================*/
+#loginForm input.form-control,
+#loginForm button.btn,
+#signupForm input.form-control,
+#signupForm button.btn {
+    height: 52px !important;
 }

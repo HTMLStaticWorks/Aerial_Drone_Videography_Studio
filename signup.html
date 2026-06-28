@@ -32,8 +32,8 @@
     <main class="d-flex align-items-center justify-content-center" style="min-height: 100vh; padding: 2rem 0;">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-5 col-xl-4">
-                    <div class="service-card p-4 p-md-5">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
+                    <div class="service-card p-4 p-lg-5">
                         <div class="text-center mb-4">
                             <a class="brand-logo-dark d-inline-flex mb-4" href="index.html" aria-label="SkyLens home">
                                 <img src="favicon.png" alt="SkyLens Logo" width="48" height="48" class="me-2">
@@ -46,19 +46,19 @@
                         <form id="signupForm" onsubmit="event.preventDefault();">
                             <div class="mb-3 text-start">
                                 <label for="name" class="form-label text-gray small fw-medium">Full Name</label>
-                                <input type="text" class="form-control bg-transparent text-main border-secondary" id="name" required placeholder="John Doe">
+                                <input type="text" class="form-control bg-transparent text-main border-secondary py-2" id="name" required placeholder="John Doe">
                             </div>
 
                             <div class="mb-3 text-start">
                                 <label for="email" class="form-label text-gray small fw-medium">Email Address</label>
-                                <input type="email" class="form-control bg-transparent text-main border-secondary" id="email" required placeholder="name@example.com">
+                                <input type="email" class="form-control bg-transparent text-main border-secondary py-2" id="email" required placeholder="name@example.com">
                             </div>
                             
                             <div class="mb-4 text-start">
                                 <label for="password" class="form-label text-gray small fw-medium mb-1">Password</label>
                                 <div class="input-group">
-                                    <input type="password" class="form-control bg-transparent text-main border-secondary border-end-0" id="password" required placeholder="••••••••">
-                                    <button class="btn btn-outline-secondary border-start-0" type="button" id="togglePasswordSignup" onclick="const p = document.getElementById('password'); p.type = p.type === 'password' ? 'text' : 'password'; this.querySelector('i').classList.toggle('bi-eye'); this.querySelector('i').classList.toggle('bi-eye-slash');">
+                                    <input type="password" class="form-control bg-transparent text-main border-secondary border-end-0 py-2" id="password" required placeholder="••••••••">
+                                    <button class="btn btn-outline-secondary border-start-0 py-2" type="button" id="togglePasswordSignup" onclick="const p = document.getElementById('password'); p.type = p.type === 'password' ? 'text' : 'password'; this.querySelector('i').classList.toggle('bi-eye'); this.querySelector('i').classList.toggle('bi-eye-slash');">
                                         <i class="bi bi-eye"></i>
                                     </button>
                                 </div>
@@ -68,8 +68,8 @@
                             <div class="mb-4 text-start">
                                 <label for="confirmPassword" class="form-label text-gray small fw-medium mb-1">Confirm Password</label>
                                 <div class="input-group">
-                                    <input type="password" class="form-control bg-transparent text-main border-secondary border-end-0" id="confirmPassword" required placeholder="••••••••">
-                                    <button class="btn btn-outline-secondary border-start-0" type="button" id="toggleConfirmPassword" onclick="const p = document.getElementById('confirmPassword'); p.type = p.type === 'password' ? 'text' : 'password'; this.querySelector('i').classList.toggle('bi-eye'); this.querySelector('i').classList.toggle('bi-eye-slash');">
+                                    <input type="password" class="form-control bg-transparent text-main border-secondary border-end-0 py-2" id="confirmPassword" required placeholder="••••••••">
+                                    <button class="btn btn-outline-secondary border-start-0 py-2" type="button" id="toggleConfirmPassword" onclick="const p = document.getElementById('confirmPassword'); p.type = p.type === 'password' ? 'text' : 'password'; this.querySelector('i').classList.toggle('bi-eye'); this.querySelector('i').classList.toggle('bi-eye-slash');">
                                         <i class="bi bi-eye"></i>
                                     </button>
                                 </div>
