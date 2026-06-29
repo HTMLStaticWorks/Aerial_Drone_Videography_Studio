@@ -530,6 +530,9 @@ body {
     text-align: center;
     position: relative;
     color: white;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 
 /* Hero Section (Index Only) */
