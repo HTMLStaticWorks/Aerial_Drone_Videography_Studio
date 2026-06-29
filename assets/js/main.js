@@ -497,12 +497,22 @@ const equalizeCardHeights = () => {
             cards.forEach(card => card.style.minHeight = '0px');
             
             if (window.innerWidth >= 768) {
-                let maxHeight = 0;
+                // Group cards by their vertical position (offsetTop) to only equalize cards on the same line
+                let rowsMap = new Map();
                 cards.forEach(card => {
-                    const h = card.offsetHeight;
-                    if (h > maxHeight) maxHeight = h;
+                    let top = Math.round(card.getBoundingClientRect().top);
+                    if (!rowsMap.has(top)) rowsMap.set(top, []);
+                    rowsMap.get(top).push(card);
                 });
-                cards.forEach(card => card.style.minHeight = maxHeight + 'px');
+                
+                rowsMap.forEach(rowCards => {
+                    let maxHeight = 0;
+                    rowCards.forEach(card => {
+                        const h = card.offsetHeight;
+                        if (h > maxHeight) maxHeight = h;
+                    });
+                    rowCards.forEach(card => card.style.minHeight = maxHeight + 'px');
+                });
             } else {
                 cards.forEach(card => card.style.minHeight = 'auto');
             }
