@@ -2183,3 +2183,64 @@ footer .form-control:focus {
     color: var(--text-muted) !important;
 }
 
+/* Service Card Always Dark Override (for cards on dark backgrounds in light mode) */
+[data-theme="light"] .service-card.always-dark h5,
+[data-theme="light"] .service-card.always-dark .text-light,
+[data-theme="light"] .service-card.always-dark .text-white {
+    color: #ffffff !important;
+}
+
+[data-theme="light"] .service-card.always-dark p,
+[data-theme="light"] .service-card.always-dark .text-white-50,
+[data-theme="light"] .service-card.always-dark .text-gray {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Responsive Navbar Spacing Fix */
+@media (min-width: 1101px) {
+    .navbar .container-xl {
+        max-width: 95% !important;
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+    
+    /* Symmetrical Centered Navbar Layout via Flexbox Auto-Margins */
+    .navbar-expand-custom .offcanvas-body {
+        width: 100%;
+        display: flex !important;
+    }
+    .navbar-expand-custom .navbar-nav {
+        width: 100%;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        gap: 1.5rem !important;
+    }
+    /* Push menu items to the center by sharing remaining space equally between logo margin and auth buttons margin */
+    .navbar-expand-custom .navbar-nav > li:first-child {
+        margin-left: auto !important;
+    }
+    .navbar-expand-custom .navbar-nav > li:nth-last-child(2) {
+        margin-right: auto !important;
+    }
+}
+
+@media (min-width: 1101px) and (max-width: 1300px) {
+    .navbar .navbar-nav {
+        gap: 0.75rem !important;
+    }
+    .navbar .nav-link {
+        font-size: 0.85rem !important;
+    }
+    .navbar .btn-outline-custom {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.82rem !important;
+    }
+    .navbar #authButtons .btn-outline-custom {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.82rem !important;
+    }
+}
+
